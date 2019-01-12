@@ -1,0 +1,308 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  //height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-size: 125%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 75%;
+
+  --google-blue-600: rgb(26, 115, 232);
+  --google-blue-700: rgb(25, 103, 210);
+  --google-gray-50: rgb(248, 249, 250);
+  --google-gray-500: rgb(154, 160, 166);
+  --google-gray-600: rgb(128, 134, 139);
+  --google-gray-700: rgb(95, 99, 105);
+  background-color: #fff;
+  color: var(--google-gray-700);
+  word-wrap: break-word;
+
+  &.main-page {
+
+  }
+
+  &.black-page {
+    background: #000;
+
+    .interstitial-wrapper {
+      color: #ddd;
+    }
+    .high-scores {
+      color: #bbb;
+    }
+    .other-versions ul li a {
+      color: #ccc;
+    }
+  }
+
+  &.mario-page {
+    background: rgb(117, 165, 249);
+
+    .interstitial-wrapper {
+      color: #fff;
+    }
+    .high-scores {
+      color: #fff;
+    }
+
+    .other-versions ul li a {
+      color: #fff;
+    }
+  }
+
+}
+
+a {
+  color: rgb(17, 85, 204);
+  text-decoration: none;
+}
+
+.icon {
+  -webkit-user-select: none;
+  display: inline-block;
+}
+
+.icon-offline {
+  //content: -webkit-image-set(url(default_100_percent/offline/100-error-offline.png) 1x, url(default_200_percent/offline/200-error-offline.png) 2x);
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Offline page */
+
+
+
+.offline .interstitial-wrapper {
+  //margin-bottom: 90px;
+  //padding-top: 48px;
+}
+
+.offline .runner-container, .offline .runner-canvas {
+  position: relative;
+}
+
+#main-frame-error {
+  margin-top: 170px;
+}
+
+.offline {
+  .interstitial-wrapper {
+    color: #2b2b2b;
+    font-size: 1em;
+    line-height: 1.55;
+    margin: 0 auto;
+    max-width: 600px;
+    //padding-top: 100px;
+    width: 100%;
+  }
+
+
+  .runner-container {
+    height: 150px;
+    max-width: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 35px;
+    width: 44px;
+    margin-left: 25px;
+  }
+  .runner-canvas {
+    height: 150px;
+    max-width: 600px;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+  .controller {
+    background: rgba(247, 247, 247, .1);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+  }
+}
+
+#offline-resources {
+  display: none;
+}
+
+
+
+/*
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+*/
+
+.__wrapper {
+  width: auto;
+  max-width: 516px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-content {
+  margin: 0;
+  padding: 0 24px;
+
+  h1 {
+    margin: 0 0 20px;
+    //font-size: 20px;
+    //text-align: center;
+    font-weight: normal;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  h2 {
+    display: none;
+  }
+
+  p {
+    margin: 0 0 10px;
+    margin-block-end : 0;
+    //font-size: 15px;
+    //text-align: center;
+  }
+}
+
+/*.ya-share2 { margin: 0 auto 48px; text-align: center;}*/
+.social-buttons {
+  margin: 0 auto 48px;
+  text-align: center;
+  overflow: hidden;
+  ul {
+    display: inline-block;
+
+    li {
+      float: left;
+      margin: 0 3px;
+
+      img {
+        border-radius: 4px;
+      }
+
+      &.fb img {
+        background: #3b5998;
+      }
+
+      &.gp img {
+        background: #dc4e41;
+      }
+      &.tw img {
+        background: #00aced;
+      }
+
+    }
+  }
+
+}
+.high-scores {
+  color: #767676;
+  margin-bottom: 48px;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 290px;
+
+  &:first-child {
+    margin-right: 50px;
+  }
+
+  .headline {
+    margin: 0 0 14px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  ul {
+    width: 230px;
+    margin: 0 auto;
+    padding: 0;
+
+    li {
+      margin: 0 0 3px;
+      font-size: 13px;
+      overflow: hidden;
+
+      span {
+
+        &.user {
+          float: left;
+          max-width: 180px;
+        }
+
+        &.result {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+
+.other-versions {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.other-versions ul {
+  display: inline-block;
+  margin: 0 0 40px;
+}
+
+.other-versions ul li {
+  float: left;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.other-versions ul li img {
+  display: block;
+}
+
+.other-versions ul li a {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer .copyright {
+  color: #444;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+
+#suggestions-list{
+  ul {
+    margin-top:0;
+  }
+}
+
+
+.error-code {
+  color: #646464;
+  display: block;
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
